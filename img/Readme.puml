@@ -1,0 +1,11 @@
+@startuml
+Cli -> IoTCockpit : Create Capability
+Cli -> IoTCockpit : Create Sensortype
+
+
+Cli -> Leonardo: Create Package Definition
+Cli -> Leonardo: Create Package
+Cli -> Leonardo: Create PropertySets
+Cli -> Leonardo: Create ThingType
+Leonardo -> IoTCockpit: Create Mapping
+@enduml

@@ -1,0 +1,21 @@
+{    
+    "Position": {
+     "Altitude": 345.56,
+     "Distance": 0.0,
+     "Speed": 0.0,
+     "Heading": 0.0,
+     "Latitude": 49.565656,
+     "Longitude": 6.797979,
+     "Accuracy": 33
+    },
+    "Sequencenumber": 45,
+    "Ipv6address": "",
+    "Uniqueaddress": "",
+    "CellInfo": {
+     "Mcc": 262,
+     "Mnc": 2,
+     "Lac": 1717,
+     "Cid": 2323333
+    }
+    
+   }

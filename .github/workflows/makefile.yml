@@ -1,0 +1,39 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Configure git for private modules
+      env:
+        TOKEN: ${{ secrets.GIT_TOKEN }}
+      run: git config --global url."https://uneidelvizuu:${TOKEN}@github.com".insteadOf "https://github.com"
+    - uses: actions/checkout@v2      
+      with: 
+        repository: vizuu/cmdvizuu
+        token:  ${{ secrets.GIT_TOKEN }} # permission
+        persist-credentials: false
+        
+    - name: Install dependencies
+      run: make build-cli
+    
+    - name: Create Release
+      run: zip -r latest.zip ./build/    
+
+    - name: Upload Zip to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GIT_TOKEN }}
+        file: latest.zip
+        asset_name: cmdvizuu.zip
+        tag: ${{ github.ref }}
+        overwrite: true
+        body: "This is the latest release of sapbtp"

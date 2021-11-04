@@ -1,0 +1,13 @@
+# IoT Cockpit
+Iotcockpit:
+  IoTServiceCFAPIURL: "https://c6d4df73-58c3-414f-b854-b4237a4bfc9a.eu10.cp.iot.sap/c6d4df73-58c3-414f-b854-b4237a4bfc9a"
+  Username: "root"
+  Password: "1XN7qLnEG4nakUy"
+  TenantId: "940472934"
+
+# Leonardo Credentials
+Leonardo:
+  AuthUrl: "https://sw-dev.authentication.eu10.hana.ondemand.com"
+  ClientId: "sb-d584f198-4f53-4273-ae3e-f918347f632b!b11938|iotae_service!b5"
+  ClientSecret: "V8wTkwv/hx+3/VRh/fC/ZbePWgw="
+  TenantId: "sw.dev"
